@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.image-marquee-container {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(135deg, #5b1fa6, #d8b4fe);
+  padding: 2rem 0;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(91, 31, 166, 0.3);
+  display: flex;
+  align-items: center;
+}
+
+.image-marquee {
+  display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
+  gap: 20px;
+  animation: marquee 15s linear infinite;
+}
+
+.image-marquee:hover {
+  animation-play-state: paused;
+}
+
+.image-wrapper {
+  flex: 0 0 auto;
+  width: 300px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
